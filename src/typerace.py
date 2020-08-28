@@ -118,8 +118,8 @@ class racer():
                     for c in w:
                         if self.closed == True:
                             break
-                        errorProbability = random.randrange(0,75) / 100
-                        accuracyWrongPercentage = 1 - self.accuracy
+                        errorProbability = random.randrange(0,100) / 100
+                        accuracyWrongPercentage = 1 - self.accuracy/100
                         if(accuracyWrongPercentage >= errorProbability):
                             payload = '4{"stream":"race","msg":"update","payload":{"e":' + str(e) + '}}' #sending error
                             ws.send(payload)
