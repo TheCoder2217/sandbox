@@ -179,4 +179,9 @@ class racer():
     def realStart(self):
         typingThread = threading.Thread(target = self.startBot, args = [])
         typingThread.start()
-
+username = input('What is your username?')
+password = input('What is your password?')
+speed = int(input('What is the speed?'))
+accuracy = int(input('What is the accuracy?'))
+botter = racer(username, password, speed, accuracy, True)
+botter.startBot()
